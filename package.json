@@ -1,0 +1,38 @@
+{
+  "name": "email-classified-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stateless Gmail triage agent: classifies unread inbox mail into Important/Neutral/Junk labels via OpenRouter, deployed on Vercel.",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "sweep": "tsx scripts/run-sweep.ts",
+    "watch": "tsx scripts/register-watch.ts",
+    "token": "tsx scripts/get-refresh-token.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "googleapis": "^189.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "@vercel/node": "^29.0.1",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.1.0"
+  }
+}

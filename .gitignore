@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# environment and credentials (never commit)
+.env
+.env.*
+!.env.example
+*.token
+*.tokens.json
+token.json
+credentials.json
+client_secret*.json
+
+# vercel
+.vercel/
+
+# build / tooling output
+dist/
+coverage/
+*.tsbuildinfo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
